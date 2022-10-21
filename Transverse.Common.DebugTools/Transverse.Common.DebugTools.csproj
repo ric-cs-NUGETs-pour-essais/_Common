@@ -2,8 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>1.0.3</Version>
-    <Description>classe Chrono, bug oubli instanciation du Stopwatch.</Description>
+    <Version>1.0.4</Version>
+    <Description>BUT : ne plus avoir de souci pour cause de Dépendance Cyclique, lors d'une Sérialisation.
+(Utilisation NewtonSoft.Json en .net5, en attendant de passer en .net 6(qui lui, nécessite VStudio 2022, mais gère bien cette fois les dépendances cycliques(Ignore) via la nouvelle mouture de System.Tetxt.Json))</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
 
 </Project>

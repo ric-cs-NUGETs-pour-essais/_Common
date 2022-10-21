@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Text.Json;
+
+//using System.Text.Json; //En .net5, ne permet pas d'ignorer simplement les dépendances cycliques.
+using Newtonsoft.Json;
 
 namespace Transverse.Common.DebugTools
 {
@@ -10,9 +12,17 @@ namespace Transverse.Common.DebugTools
             Console.WriteLine(GetSerializedData(data));
         }
 
-        public static string GetSerializedData(object data, bool indented = true)
+        // using System.Text.Json; //En .net5, ne permet pas d'ignorer simplement les dépendances cycliques.
+        /*public static string GetSerializedData(object data, bool indented = true)
         {
             var retour = JsonSerializer.Serialize(data, new JsonSerializerOptions() { WriteIndented = indented });
+
+            return retour;
+        }*/
+
+        public static string GetSerializedData(object data, bool indented = true)
+        {
+            var retour = JsonConvert.SerializeObject(data, Formatting.Indented, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
 
             return retour;
         }

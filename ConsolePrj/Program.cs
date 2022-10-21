@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 
 using Infra.Common.DataAccess.Interfaces;
@@ -8,6 +9,12 @@ using Transverse.Common.DebugTools;
 
 namespace ConsolePrj
 {
+    class SerializeMe
+    {
+        public List<SerializeMe> listeOfMe { get; } = new List<SerializeMe> { };
+        public int p1 = 10;
+    }
+
     static class Program
     {
         static void Main(string[] args)
@@ -21,8 +28,16 @@ namespace ConsolePrj
                 Options = "yyy=true"
             };
             Debug.ShowData(dbServerAccessConfiguration);
-            
+
             //c.StopAndShowDuration();
+
+
+            //Handling of Cyclic dependency in Serialization, OK :
+            var oSerializeMe = new SerializeMe();
+            var oSerializeMe2 = new SerializeMe();
+            oSerializeMe.listeOfMe.Add(oSerializeMe);
+            oSerializeMe.listeOfMe.Add(oSerializeMe2);
+            Debug.ShowData(oSerializeMe);
 
             Console.WriteLine("\n\nOk"); Console.ReadKey();
         }
