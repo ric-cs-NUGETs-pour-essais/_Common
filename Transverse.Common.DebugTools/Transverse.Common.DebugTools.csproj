@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>1.0.4</Version>
-    <Description>BUT : ne plus avoir de souci pour cause de Dépendance Cyclique, lors d'une Sérialisation.
-(Utilisation NewtonSoft.Json en .net5, en attendant de passer en .net 6(qui lui, nécessite VStudio 2022, mais gère bien cette fois les dépendances cycliques(Ignore) via la nouvelle mouture de System.Tetxt.Json))</Description>
+    <Version>1.0.5</Version>
+    <Description>GetSerializedData(object data, bool indented = false)
+au lieu de GetSerializedData(object data, bool indented = true) qui d'ailleurs ne gérait pas le flag en le considérant quand même tout le temps à true ^^</Description>
   </PropertyGroup>
 
   <ItemGroup>

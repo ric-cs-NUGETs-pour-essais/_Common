@@ -9,7 +9,7 @@ namespace Transverse.Common.DebugTools
     {
         public static void ShowData(object data)
         {
-            Console.WriteLine(GetSerializedData(data));
+            Console.WriteLine(GetSerializedData(data, true));
         }
 
         // using System.Text.Json; //En .net5, ne permet pas d'ignorer simplement les dépendances cycliques.
@@ -20,9 +20,15 @@ namespace Transverse.Common.DebugTools
             return retour;
         }*/
 
-        public static string GetSerializedData(object data, bool indented = true)
+        public static string GetSerializedData(object data, bool indented = false)
         {
-            var retour = JsonConvert.SerializeObject(data, Formatting.Indented, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
+            Formatting formatting = (indented) ? Formatting.Indented : Formatting.None;
+            JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings()
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                };
+
+            var retour = JsonConvert.SerializeObject(data, formatting, jsonSerializerSettings);
 
             return retour;
         }
