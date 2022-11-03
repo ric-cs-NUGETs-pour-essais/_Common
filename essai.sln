@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Common.DataAccess.Int
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Common.DataAccess", "Infra.Common.DataAccess\Infra.Common.DataAccess.csproj", "{9E783162-FD0E-420B-8450-CE694AAF002D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Common.Strings", "Transverse.Common.Strings\Transverse.Common.Strings.csproj", "{DC0D6830-FD98-47D7-862B-46A611C3D9C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Common.Strings", "Transverse.Common.Strings\Transverse.Common.Strings.csproj", "{DC0D6830-FD98-47D7-862B-46A611C3D9C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Common.DiskElements", "Infra.Common.DiskElements\Infra.Common.DiskElements.csproj", "{35054F40-C6CF-4060-B038-D362F435382B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Common.DiskElements", "Infra.Common.DiskElements\Infra.Common.DiskElements.csproj", "{35054F40-C6CF-4060-B038-D362F435382B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Common.Environment", "Infra.Common.Environment\Infra.Common.Environment.csproj", "{D93F86BB-DD34-464D-88BD-5271D49B2BAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{35054F40-C6CF-4060-B038-D362F435382B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35054F40-C6CF-4060-B038-D362F435382B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35054F40-C6CF-4060-B038-D362F435382B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93F86BB-DD34-464D-88BD-5271D49B2BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93F86BB-DD34-464D-88BD-5271D49B2BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93F86BB-DD34-464D-88BD-5271D49B2BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93F86BB-DD34-464D-88BD-5271D49B2BAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

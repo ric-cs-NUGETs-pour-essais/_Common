@@ -27,7 +27,14 @@ namespace ConsolePrj
 
             //TestSerializationCyclicDependencies();
 
+            //TestEnvironment();
+
             Console.WriteLine("\n\nOk"); Console.ReadKey();
+        }
+
+        private static void TestEnvironment()
+        {
+            Console.WriteLine($"Environment.IsHome() : {Infra.Common.Environment.IsHome()}");
         }
 
         private static void TestSerializationCyclicDependencies()
