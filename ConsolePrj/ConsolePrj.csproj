@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Infra.Common.DataAccess.Interfaces\Infra.Common.DataAccess.Interfaces.csproj" />
     <ProjectReference Include="..\Infra.Common.DataAccess\Infra.Common.DataAccess.csproj" />
+    <ProjectReference Include="..\Infra.Common.DiskElements\Infra.Common.DiskElements.csproj" />
     <ProjectReference Include="..\Transverse.Common.DebugTools\Transverse.Common.DebugTools.csproj" />
   </ItemGroup>
 
