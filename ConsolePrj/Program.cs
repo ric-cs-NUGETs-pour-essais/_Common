@@ -17,6 +17,13 @@ namespace ConsolePrj
         public int p1 = 10;
     }
 
+    class TMyJsonFilesDataType
+    {
+        public string ps1 { get; set; }
+        public double pn1 { get; set; }
+        public DateTime pd1 { get; set; }
+    }
+
     static class Program
     {
         static void Main(string[] args)
@@ -29,7 +36,19 @@ namespace ConsolePrj
 
             //TestEnvironment();
 
+            //TestJsonFile();
+
             Console.WriteLine("\n\nOk"); Console.ReadKey();
+        }
+
+        private static void TestJsonFile()
+        {
+            var jsonFile = new JsonFile<TMyJsonFilesDataType>("I:/zzzzzzzzzPoub/zzzEssaisJsonFiles/File1.json");
+            jsonFile.Content.pd1 = DateTime.Now;
+            jsonFile.Content.pn1 += 1000;
+            jsonFile.Content.ps1 += " ; Hello é";
+            jsonFile.Save();
+
         }
 
         private static void TestEnvironment()
